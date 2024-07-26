@@ -1,0 +1,67 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="containerr">
+        <h1>Sentiment Analysis Result</h1>
+        <div class="sentiment-result">
+            <p class="sentiment-label">Sentiment Polarity:</p>
+            <p>{{ sentiment.polarity }}</p>
+            <p>{{ get_sentiment_text(sentiment.polarity) }}</p>
+            <img src="{{ get_sentiment_image(sentiment.polarity) }}" alt="Polarity Image">
+
+            <p class="sentiment-label">Sentiment Subjectivity:</p>
+            <p>{{ sentiment.subjectivity }}</p>
+            <p>{{ get_sentiment_text(sentiment.subjectivity) }}</p>
+            <img src="{{ get_sentiment_image(sentiment.subjectivity) }}" alt="Subjectivity Image">
+        </div>
+        <a href="/" class="btn btn-primary">Back</a>
+    </div>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sentiment Analysis</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+
+  <body>
+    <div class="containerr">
+      <h1>Sentiment Analysis Result</h1>
+      <div class="sentiment-result">
+        <h2>Sentiment Analysis Result</h2>
+        <p class="sentiment-label">Original Text: </p>
+        <p>{{ original_text }}</p>
+        <p class="sentiment-label">Sentiment Score: </p>
+        <p>{{ sentiment_score }}</p>
+        {% set sentiment_label = get_sentiment_text(sentiment_score) %}
+        <p class="sentiment-label">Sentiment: </p> {{ sentiment_label }}</p>
+        <!-- <p class="sentiment-label">Sentiment Polarity:</p>
+            <p>{{ sentiment.polarity }}</p>
+            <p>{{ get_sentiment_text(sentiment.polarity) }}</p>
+            <img src="{{ get_sentiment_image(sentiment.polarity) }}" alt="Polarity Image">
+
+            <p class="sentiment-label">Sentiment Subjectivity:</p>
+            <p>{{ sentiment.subjectivity }}</p>
+            <p>{{ get_sentiment_text(sentiment.subjectivity) }}</p>
+            <img src="{{ get_sentiment_image(sentiment.subjectivity) }}" alt="Subjectivity Image"> -->
+      </div>
+      <a href="/" class="btn btn-primary">Back</a>
+    </div>
+  </body>
+</html>
